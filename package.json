@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/jchethcox/todo-cli/issues"
   },
-  "homepage": "https://github.com/jchethcox/todo-cli#readme"
+  "homepage": "https://github.com/jchethcox/todo-cli#readme",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
 }
