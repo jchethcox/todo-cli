@@ -1,23 +1,23 @@
 const { head } = require('ramda')
 
-const [execPath, jsPath, cmd, ...rest] = process.argv
+const [execNodePath, jsPath, cmd, ...everythingelse] = process.argv
 
-// console.log(`execPath`, execPath)
-// console.log(`jsPath`, execPath)
-// console.log(`cmd`, cmd)
-// console.log(`rest`, rest)
+// process.argv.forEach((val, index) => {
+//   console.log(`${index}: ${val}`)
+// })
+
+console.log(handleCmd(cmd))
 
 function handleCmd(cmd) {
+  // 'add', 'init', 'rm'
   switch (cmd) {
-    case 'add':
-      return 'you asked for add'
-    case 'rm':
-      return 'you asked for remove'
     case 'init':
-      return 'you asked for init'
+      return 'you asked for the init cmd'
+    case 'add':
+      return 'you asked for the add cmd'
+    case 'rm':
+      return 'you asked for the rm cmd'
     default:
       return `${cmd} is not supported`
   }
 }
-
-console.log(handleCmd(cmd))
